@@ -3,8 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/nosotros.css';
 import homeNosotros from '../assets/images/homeNosotros.jpg';
-import homeServicios from '../assets/images/homeServicios.png'; // Same bg used for filosofia
-
+import homeServicios from '../assets/images/homeServicios.png';
 interface NosotrosProps {
   onNavigate?: (path: string) => void;
 }
@@ -16,7 +15,6 @@ const Nosotros: React.FC<NosotrosProps> = ({ onNavigate }) => {
 
   return (
     <div className="nosotros-page">
-      {/* Top Header with Navbar and Title */}
       <header className="nosotros-header">
         <Navbar className="dark-text" onNavigate={onNavigate} showLogo={true} />
 

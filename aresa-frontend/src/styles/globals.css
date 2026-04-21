@@ -39,14 +39,14 @@
 
 @font-face {
   font-family: 'Dinish Condensed';
-  src: url('./fonts/DinishCondensed-Bold.otf') format('opentype');
+  src: url('../assets/fonts/DinishCondensed-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Dinish Expanded';
-  src: url('./fonts/DinishExpanded-Bold.otf') format('opentype');
+  src: url('../assets/fonts/DinishExpanded-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }

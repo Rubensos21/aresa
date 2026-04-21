@@ -54,10 +54,10 @@ export default function App() {
   ];
 
   useEffect(() => {
-    // Intervalo para cambiar imagenes
+    if (currentPage !== 'inicio' && currentPage !== '') return;
     const interval = setInterval(goToNextImage, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [currentPage]);
 
   // GSAP: Animación dinámica de Hero "ARESA" hacia el Navbar fijo
   useEffect(() => {
@@ -137,7 +137,9 @@ export default function App() {
   };
 
   const animateGalleryImage = () => {
-    gsap.fromTo('.gallery-image-main',
+    const el = document.querySelector('.gallery-image-main');
+    if (!el) return;
+    gsap.fromTo(el,
       { opacity: 0.5, x: 20 },
       { opacity: 1, x: 0, duration: 0.5 }
     );

@@ -62,7 +62,7 @@ const Proyectos: React.FC<ProyectosProps> = ({ onNavigate }) => {
         >
           <div className="proyectos-hero-overlay">
             
-            <Navbar className="light-text" onNavigate={onNavigate} />
+            <Navbar className="dark-text" onNavigate={onNavigate} />
 
             <div className="proyectos-hero-content">
               <div className="proyectos-tag-pill-hero">PROYECTOS</div>
