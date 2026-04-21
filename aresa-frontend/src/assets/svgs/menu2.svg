@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="134" viewBox="0 0 39 134">
+  <defs>
+    <path id="corner-bracket" d="M0,0 H21 V5 H5 V21 H0 Z" />
+  </defs>
+  <g id="brackets" fill="currentColor" transform="scale(-1,1) translate(-39,0)">
+    <use href="#corner-bracket" x="7" y="7" />
+    <use href="#corner-bracket" x="7" y="-109" transform="scale(1,-1) translate(0,-20)" />
+  </g>
+</svg>

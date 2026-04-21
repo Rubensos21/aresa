@@ -1,0 +1,195 @@
+.nosotros-page {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+/* Header */
+.nosotros-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.nosotros-header .global-navbar {
+  align-self: flex-end;
+  padding: 2rem 4rem;
+}
+
+.nosotros-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+
+.nosotros-tag-pill {
+  font-family: 'Dinish Condensed', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 50px;
+  padding: 0.2rem 3rem;
+}
+
+/* Main Two Columns */
+.nosotros-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.nosotros-image-col {
+  padding: 2rem;
+  border-right: 2px solid #000;
+}
+
+.nosotros-image-full {
+  width: 100%;
+  height: 100%;
+  max-height: 800px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.nosotros-info-col {
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.info-block h3 {
+  font-family: 'Dinish Condensed', Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #000;
+}
+
+.info-block p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #000;
+}
+
+/* Valores Section */
+.valores-grid-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 500px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 4rem;
+}
+
+.valores-title-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid #000;
+  padding: 2rem;
+}
+
+.valores-title-big {
+  font-family: 'Dinish Condensed', Arial, sans-serif;
+  font-size: clamp(3rem, 5vw, 6rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.valores-cards-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.valor-box {
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.valor-box h4 {
+  font-family: 'Dinish Condensed', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.valor-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #444;
+}
+
+/* Filosofía Section */
+.filosofia-section {
+  width: 100%;
+}
+
+.filosofia-bg {
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.filosofia-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+}
+
+.filosofia-text {
+  max-width: 600px;
+  color: #000;
+}
+
+.filosofia-text h2 {
+  font-family: 'Dinish Condensed', Arial, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+
+.filosofia-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+}
+
+/* Responsive constraints */
+@media screen and (max-width: 900px) {
+  .nosotros-main-grid, .valores-grid-section {
+    grid-template-columns: 1fr;
+  }
+  .nosotros-image-col, .valores-title-col {
+    border-right: none;
+    border-bottom: 2px solid #000;
+  }
+  .valores-cards-col {
+    grid-template-columns: 1fr;
+  }
+}

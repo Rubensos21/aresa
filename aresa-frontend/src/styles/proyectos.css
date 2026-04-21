@@ -1,0 +1,197 @@
+.proyectos-page {
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+/* HERO SECTION */
+.proyectos-hero-section {
+  width: 100%;
+}
+
+.proyectos-hero-bg {
+  width: 100%;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.proyectos-hero-overlay {
+  width: 100%;
+  min-height: 80vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.proyectos-header-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.header-logo-proyectos {
+  font-family: 'Dinish Condensed', Arial, sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+}
+
+.proyectos-hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+.proyectos-tag-pill-hero {
+  border: 2px solid #000;
+  border-radius: 50px;
+  padding: 0.2rem 1.5rem;
+  font-family: 'Dinish Condensed', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  background: transparent;
+  margin-bottom: 1rem;
+}
+
+.proyectos-huge-title {
+  font-family: 'Dinish Condensed', Arial, sans-serif;
+  font-size: clamp(4rem, 8vw, 8rem);
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.proyectos-filter-bar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  border: 1.5px solid #000;
+  border-radius: 50px;
+  padding: 0.3rem 1rem;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  font-family: 'Dinish Condensed', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.filter-btn.active {
+  background: #000;
+  color: #fff;
+}
+
+/* GRID SECTION */
+.proyectos-main-grid-section {
+  padding: 5rem 4rem;
+}
+
+.proyectos-dynamic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.proyecto-item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.proyecto-img-container {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.proyecto-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.proyecto-img-container:hover img {
+  transform: scale(1.05);
+}
+
+.proyecto-desc-text {
+  font-family: 'Dinish Condensed', Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* CTA */
+.proyectos-cta-wrapper {
+  padding: 4rem 2rem 8rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-question {
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .proyectos-dynamic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .proyectos-dynamic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proyectos-header-layout {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .proyectos-filter-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    border: none;
+  }
+
+  .filter-btn {
+    border: 1px solid #fff;
+  }
+}

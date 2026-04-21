@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@font-face {
+  font-family: 'Dinish';
+  src: url('../assets/fonts/Dinish-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Dinish';
+  src: url('../assets/fonts/Dinish-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Dinish';
+  src: url('../assets/fonts/Dinish-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+} 
+
+@font-face {
+  font-family: 'Dinish Condensed';
+  src: url('./fonts/DinishCondensed-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dinish Expanded';
+  src: url('./fonts/DinishExpanded-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+.font-dinish {
+  font-family: 'Dinish', Arial, sans-serif;
+}
+.font-montserrat {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+.animate-slideInUp {
+  animation: slideInUp 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+.animate-slideInRight {
+  animation: slideInRight 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+.hero-title {
+  letter-spacing: -0.05em;
+} 

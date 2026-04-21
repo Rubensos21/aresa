@@ -1,0 +1,15 @@
+:root {
+  /* Colores */
+  --color-primary: #e63946;
+  --color-secondary: #1d3557;
+  --color-light: #fff;
+  --color-dark: #000;
+  
+
+  /* Transiciones */
+  --transition-normal: 0.3s;
+
+  /* Sombras */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+} 
