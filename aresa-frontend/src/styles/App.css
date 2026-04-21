@@ -581,50 +581,146 @@ body {
 /* RESPONSIVENESS FALLBACK */
 @media screen and (max-width: 768px) {
 
-  .grid-2-col,
-  .grid-2-col-proyectos {
-    flex-direction: column;
-    display: flex;
+  /* Hero */
+  .hero-title {
+    margin-left: 0;
+    margin-top: 15vh;
+    font-size: clamp(5rem, 18vw, 10rem);
   }
 
   .grid-hero {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+
+  .hero-desc {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    max-width: 100%;
   }
 
   .hero-nav {
     display: none;
   }
 
-  .hero-desc {
-    margin-left: 0;
+  /* Sections */
+  .nosotros-section {
+    padding: 3rem 1.5rem 0 1.5rem;
+  }
+
+  .section-main-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+  }
+
+  /* Two-column grids → single column */
+  .grid-2-col {
+    display: flex;
+    flex-direction: column;
   }
 
   .grid-2-col .image-column {
     border-right: none;
     border-bottom: 2px solid #000;
-    padding-right: 0;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
+    padding: 2rem 0;
   }
 
   .grid-2-col .text-column {
-    padding-left: 0;
+    padding: 2rem 0 0 0;
+  }
+
+  .content-text {
+    font-size: 1.1rem;
+  }
+
+  /* Proyectos home section */
+  .proyectos-section {
+    padding: 0 1.5rem;
+  }
+
+  .grid-2-col-proyectos {
+    flex-direction: column;
+    display: flex;
   }
 
   .proyectos-left-col,
   .proyectos-right-col {
     width: 100%;
     border-right: none;
-    padding: 0;
+    padding: 2rem 0;
   }
 
+  .section-big-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  /* Carousel */
   .carousel-images {
-    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .gallery-image-main,
+  .gallery-image-secondary,
+  .gallery-image-tertiary {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  .gallery-image-secondary,
+  .gallery-image-tertiary {
+    display: none;
+  }
+
+  /* Mid nav banner */
+  .mid-nav-banner {
+    padding: 1rem 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .mid-nav-logo {
+    font-size: 1.8rem;
+  }
+
+  /* Servicios home */
+  .servicios-bg {
+    height: auto;
+    min-height: 50vh;
+    background-attachment: scroll;
+  }
+
+  .servicios-overlay {
+    padding: 3rem 1.5rem;
+  }
+
+  .servicios-big-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  /* Footer */
+  .contact-cta-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .btn-pill-contact {
+    font-size: 1.6rem;
+    padding: 0.8rem 3rem;
   }
 
   .footer-content {
     flex-direction: column;
     gap: 3rem;
+    padding: 0 1.5rem;
+  }
+
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }

@@ -4,10 +4,10 @@
   align-items: center;
   width: 100%;
   padding: 2rem 4rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 9999;
   box-sizing: border-box;
 }
 
@@ -52,21 +52,33 @@
   height: 16px;
   border: 0 solid currentColor;
 }
+
 .nav-corner.top-left {
-  top: 0; left: 0;
-  border-top-width: 2px; border-left-width: 2px;
+  top: 0;
+  left: 0;
+  border-top-width: 2px;
+  border-left-width: 2px;
 }
+
 .nav-corner.top-right {
-  top: 0; right: 0;
-  border-top-width: 2px; border-right-width: 2px;
+  top: 0;
+  right: 0;
+  border-top-width: 2px;
+  border-right-width: 2px;
 }
+
 .nav-corner.bottom-left {
-  bottom: 0; left: 0;
-  border-bottom-width: 2px; border-left-width: 2px;
+  bottom: 0;
+  left: 0;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
 }
+
 .nav-corner.bottom-right {
-  bottom: 0; right: 0;
-  border-bottom-width: 2px; border-right-width: 2px;
+  bottom: 0;
+  right: 0;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
 }
 
 /* Modificadores */
@@ -76,4 +88,83 @@
 
 .global-header-wrapper.light-text {
   color: #fff;
+}
+
+/* When overlay is open, force white text on header */
+.global-header-wrapper.menu-open {
+  color: #fff;
+}
+
+/* ─── Mobile Menu Button ─── */
+.mobile-menu-btn {
+  display: none;
+  position: relative;
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+}
+
+.mobile-menu-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0px;
+}
+
+/* ─── Full-screen Mobile Overlay ─── */
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #000;
+  z-index: 9998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-overlay-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.mobile-nav-link {
+  color: #fff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: opacity 0.3s;
+}
+
+.mobile-nav-link:hover {
+  opacity: 0.6;
+}
+
+/* ─── Responsive: Mobile ─── */
+@media (max-width: 768px) {
+  .global-header-wrapper {
+    padding: 1.5rem;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
 }

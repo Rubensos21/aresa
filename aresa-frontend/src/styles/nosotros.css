@@ -11,10 +11,6 @@
   padding-bottom: 3rem;
 }
 
-.nosotros-header .global-navbar {
-  align-self: flex-end;
-  padding: 2rem 4rem;
-}
 
 .nosotros-title-wrapper {
   display: flex;
@@ -155,7 +151,7 @@
 .filosofia-overlay {
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   padding-left: 5rem;
@@ -182,14 +178,58 @@
 
 /* Responsive constraints */
 @media screen and (max-width: 900px) {
-  .nosotros-main-grid, .valores-grid-section {
+
+  .nosotros-main-grid,
+  .valores-grid-section {
     grid-template-columns: 1fr;
   }
-  .nosotros-image-col, .valores-title-col {
+
+  .nosotros-image-col,
+  .valores-title-col {
     border-right: none;
     border-bottom: 2px solid #000;
   }
+
   .valores-cards-col {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .nosotros-title-wrapper {
+    margin-top: 6rem;
+    padding: 0 1.5rem;
+  }
+
+  .nosotros-tag-pill {
+    font-size: 1.8rem;
+    padding: 0.2rem 2rem;
+  }
+
+  .nosotros-info-col {
+    padding: 2rem 1.5rem;
+  }
+
+  .nosotros-image-col {
+    padding: 1.5rem;
+  }
+
+  .valores-cards-col {
+    padding: 1.5rem;
+  }
+
+  .filosofia-bg {
+    height: auto;
+    min-height: 40vh;
+    background-attachment: scroll;
+  }
+
+  .filosofia-overlay {
+    padding: 3rem 1.5rem;
+  }
+
+  .filosofia-text h2 {
+    font-size: 2.5rem;
   }
 }

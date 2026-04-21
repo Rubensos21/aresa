@@ -59,6 +59,67 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
+  // GSAP: Animación dinámica de Hero "ARESA" hacia el Navbar fijo
+  useEffect(() => {
+    if (currentPage !== 'inicio' && currentPage !== '') return;
+
+    const ctx = gsap.context(() => {
+      const navLogo = document.getElementById('home-nav-logo');
+      const heroTitle = document.querySelector('.hero-title');
+      
+      if (!navLogo || !heroTitle) return;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".hero-main-section",
+          start: "top top",
+          end: "+=500", // Gradual hasta 500px
+          scrub: true,
+          invalidateOnRefresh: true
+        }
+      });
+
+      tl.to(heroTitle, {
+        x: () => {
+          const navRect = navLogo.getBoundingClientRect();
+          const heroRect = heroTitle.getBoundingClientRect();
+          return navRect.left - heroRect.left;
+        },
+        y: () => {
+          const navRect = navLogo.getBoundingClientRect();
+          const heroRect = heroTitle.getBoundingClientRect();
+          return navRect.top - heroRect.top;
+        },
+        scale: () => {
+          const navRect = navLogo.getBoundingClientRect();
+          const heroRect = heroTitle.getBoundingClientRect();
+          return navRect.width / heroRect.width; 
+        },
+        transformOrigin: "top left",
+        opacity: 0,
+        ease: "none"
+      }, 0);
+
+      tl.to(navLogo, {
+        opacity: 1,
+        ease: "power1.inOut" // Crossfade suave en la llegada
+      }, 0); 
+      
+      // Cambio de color al pasar el hero video
+      gsap.to(".global-header-wrapper", {
+        scrollTrigger: {
+          trigger: ".nosotros-section",
+          start: "top 80px", // Justo antes de que choque con el header
+          toggleActions: "play none none reverse"
+        },
+        color: "#000",
+        duration: 0.3
+      });
+    });
+
+    return () => ctx.revert();
+  }, [currentPage]);
+
   const goToPrevImage = () => {
     setCurrentIndex(prev => {
       const next = prev === 0 ? imagenes.length - 1 : prev - 1;
@@ -87,13 +148,13 @@ export default function App() {
       case 'nosotros':
         return <Nosotros onNavigate={handleNavigation} />;
       case 'servicios':
-        return <Servicios />; // We will update these later
+        return <Servicios onNavigate={handleNavigation} />;
       case 'proyectos':
         return <Proyectos onNavigate={handleNavigation} />;
       case 'blog':
-        return <Blog />;
+        return <Blog onNavigate={handleNavigation} />;
       case 'contacto':
-        return <Contacto />;
+        return <Contacto onNavigate={handleNavigation} />;
       default:
         return (
           <div className="home-page-content">
@@ -110,7 +171,13 @@ export default function App() {
               <div className="overlay" />
 
               {/* TOP NAVBAR (UNIFIED GLOBAL) */}
-              <Navbar className="light-text" onNavigate={handleNavigation} showLogo={false} />
+              <Navbar 
+                className="light-text" 
+                onNavigate={handleNavigation} 
+                showLogo={true} 
+                logoId="home-nav-logo"
+                logoStyle={{ opacity: 0 }} /* Oculto de arranque para el crossfade */
+              />
 
               {/* HERO TEXT */}
               <div className="hero-content grid-hero">

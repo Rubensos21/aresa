@@ -1,10 +1,10 @@
 # Aresa - Ingeniería, Arquitectura y Construcción
 
-Bienvenido al repositorio oficial del portal web corporativo de **Aresa**. Este proyecto consiste en una aplicación web moderna diseñada con estándares *pixel-perfect*, orientada a representar la presencia digital de una empresa constructora y de ingeniería mexicana especializada en proyectos residenciales, industriales y herrería de alta precisión.
+Bienvenido al repositorio oficial del portal web corporativo de **Aresa**. Este proyecto consiste en una aplicación web moderna, orientada a representar la presencia digital de una empresa constructora y de ingeniería mexicana especializada en proyectos residenciales, industriales y herrería de alta precisión.
 
-## 🏗️ Arquitectura del Proyecto
+## Arquitectura del Proyecto
 
-Este repositorio está estructurado como un **Monorepo** que consolida de manera organizada tanto la experiencia gráfica del cliente (Frontend) como la lógica y persistencia de datos del servidor (Backend).
+Este repositorio consolida de manera organizada tanto la experiencia gráfica del cliente (Frontend) como la lógica y persistencia de datos del servidor (Backend).
 
 ### `aresa-frontend`
 Aplicación enfocada en alto rendimiento, transiciones fluidas y una estética minimalista ("glassmorphism" fusionado con geometría corporativa).
@@ -45,7 +45,7 @@ npm run dev
 ---
 
 ## 🎨 Sistema de Diseño
-El Frontend se rige por especificaciones muy estrictas de *Diseño Pixel-Perfect*, destacando:
+El Frontend se rige por especificaciones muy estrictas, destacando:
 - Fuentes integradas localmente: **Dinish Condensed** (Títulos) y **Montserrat** (Cuerpo de texto).
 - Navegadores y layouts encuadrados mediante `display: grid`.
 - Bordes vectoriales absolutos para generar marcadores estilo *esquinas de enfoque* en componentes globales como el `<Navbar />`.
